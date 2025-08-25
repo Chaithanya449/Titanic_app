@@ -7,7 +7,7 @@ import joblib
 
 # --- Load the Trained Model and Scaler ---
 try:
-    model = joblib.load('logistic_regression_model.pkl1()')
+    model = joblib.load('logistic_regression_model.pkl(1)')
     scaler = joblib.load('scaler.pkl(1)')
 except FileNotFoundError:
     st.error("Model or scaler files not found. Please ensure 'logistic_regression_model.pkl' and 'scaler.pkl' are in the same directory as app.py.")
@@ -58,3 +58,4 @@ if st.button('Predict Survival'):
         st.error(f"This passenger would have likely **NOT SURVIVED**.")
 
         st.write(f"Probability of Not Surviving: {prediction_proba[0][0]*100:.2f}%")
+
